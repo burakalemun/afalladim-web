@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { RiStarFill } from 'react-icons/ri';
-import { type Product } from '@/lib/products-data'; // Veri tipini import ediyoruz
+import { type Product } from '@/lib/content'; // Veri tipini import ediyoruz
 
 const ProductCard = ({ title, description, imageSrc, category, rating }: Product) => {
     // Yıldızları oluşturmak için basit bir helper
