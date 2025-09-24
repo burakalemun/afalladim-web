@@ -1,0 +1,38 @@
+/* 1. Tailwind'in temel katmanlarını import et. Hatanın çözümü bu üç satır. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Opsiyonel: Temel body stilleri ve değişkenleri ekleyebiliriz. */
+/*    Bu kısım şimdilik olmasa da olur ama en iyi pratik budur. */
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+.dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+}
+
+body {
+    @apply bg-slate-50; /* Sayfanın varsayılan açık gri arkaplanı */
+}
+
+@layer components {
+    .form-input {
+        @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-sm font-lato;
+    }
+}
+
+@layer base {
+    /* Başlık fontlarını varsayılan olarak ata */
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-playfair;
+    }
+
+    /* Body ve geri kalan her şey için varsayılan fontu ata */
+    body {
+        @apply font-lato;
+    }
+}
