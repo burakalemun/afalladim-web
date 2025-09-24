@@ -23,7 +23,7 @@ const StorySection = () => {
                             alt="Mistik bir kütüphane"
                             width={600}
                             height={500}
-                            class="rounded-2xl shadow-2xl object-cover w-full h-96"
+                            className="rounded-2xl shadow-2xl object-cover w-full h-96"
                         />
                     </div>
                 </div>
