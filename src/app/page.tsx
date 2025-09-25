@@ -1,5 +1,4 @@
 import React from 'react';
-// Tüm component'lerimizi import ediyoruz
 import Hero from '../components/sections/Main/Hero';
 import FeaturesSection from '../components/sections/Main/FeaturesSection';
 import ShowcaseSection from '../components/sections/Main/ShowcaseSection';
@@ -13,7 +12,7 @@ export default function HomePage() {
         <div className="bg-slate-50 font-sans">
 
             <div className="relative">
-                <div className="-mt-16"> {/* Header'ın kapladığı boşluğu geri almak için negatif margin */}
+                <div className="-mt-16">
                     <Hero />
                 </div>
             </div>

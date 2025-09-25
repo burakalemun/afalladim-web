@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { RiStarFill } from 'react-icons/ri';
-import { type Product } from '@/lib/content'; // Veri tipini import ediyoruz
+import { type Product } from '@/lib/content';
 
 const ProductCard = ({ title, description, imageSrc, category, rating }: Product) => {
-    // Yıldızları oluşturmak için basit bir helper
     const renderStars = () => {
         return [...Array(5)].map((_, i) => (
             <RiStarFill key={i} className={i < Math.round(rating) ? 'text-amber-500' : 'text-slate-300'} />
@@ -13,7 +12,6 @@ const ProductCard = ({ title, description, imageSrc, category, rating }: Product
 
     return (
         <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group cursor-pointer">
-            {/* Resim Alanı */}
             <div className="relative overflow-hidden">
                 <Image
                     alt={title}
@@ -29,7 +27,6 @@ const ProductCard = ({ title, description, imageSrc, category, rating }: Product
                 </div>
             </div>
 
-            {/* İçerik Alanı */}
             <div className="p-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-amber-600 transition-colors font-playfair">
                     {title}
